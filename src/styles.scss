@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: 'cormorant-regular';
+    src: url('/fonts/Cormorant_Upright/CormorantUpright-Regular.ttf')format('truetype');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'cormorant-bold';
+    src: url('/fonts/Cormorant_Upright/CormorantUpright-Bold.ttf')format('truetype');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'cormorant-semi';
+    src: url('/fonts/Cormorant_Upright/CormorantUpright-SemiBold.ttf')format('truetype');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'cormorant-light';
+    src: url('/fonts/Cormorant_Upright/CormorantUpright-Light.ttf')format('truetype');
+    font-style: normal;
+}

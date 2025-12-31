@@ -1,0 +1,27 @@
+<div class="events-container">
+  <div
+    #eventCard
+    class="event-card"
+    *ngFor="let event of events; let i = index"
+    [class.reverse]="event.imagePosition === 'right'"
+  >
+    <div class="event-image">
+      <img [src]="event.image" [alt]="event.title" />
+    </div>
+
+    <div class="event-details">
+      <h2 class="event-title">{{ event.title }}</h2>
+      <p class="event-date">{{ event.date }}</p>
+      <p class="event-time">{{ event.time }}</p>
+      <p class="event-location">{{ event.location }}</p>
+      <a
+        [href]="event.mapLink"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="map-link"
+      >
+        Carte
+      </a>
+    </div>
+  </div>
+</div>

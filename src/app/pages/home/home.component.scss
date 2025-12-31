@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&display=swap');
+
+.wedding-container {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  min-height: 600px;
+  background-image: url('/images/img1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Overlay sombre sur l'image de fond */
+.wedding-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.initials {
+  font-family: 'Cormorant Upright', serif;
+  font-size: 4rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex: 1;
+  padding: 20px;
+}
+
+.announcement {
+  font-family: 'Cormorant Upright', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.names {
+  font-family: 'Cormorant Upright', serif;
+  font-size: 5.5rem;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  margin: 20px 0;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dates {
+  font-family: 'Cormorant Upright', serif;
+  font-size: 2.2rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Tablette */
+@media screen and (max-width: 1024px) {
+  .header {
+    top: 30px;
+  }
+
+  .initials {
+    font-size: 3.5rem;
+  }
+
+  .announcement {
+    font-size: 1.8rem;
+  }
+
+  .names {
+    font-size: 4.5rem;
+  }
+
+  .dates {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wedding-container {
+    min-height: 400px;
+  }
+
+  .header {
+    top: 25px;
+  }
+
+  .initials {
+    font-size: 2.8rem;
+  }
+
+  .announcement {
+    font-size: 1.5rem;
+  }
+
+  .names {
+    font-size: 3.5rem;
+  }
+
+  .dates {
+    font-size: 1.6rem;
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+}
+
+/* Responsive Téléphone */
+@media screen and (max-width: 480px) {
+  .wedding-container {
+    min-height: 50vh;
+    background-position: 60% center;
+  }
+
+  .header {
+    top: 20px;
+  }
+
+  .initials {
+    font-size: 2.2rem;
+  }
+
+  .announcement {
+    font-size: 1.3rem;
+  }
+
+  .names {
+    font-size: 2.8rem;
+    margin: 15px 0;
+  }
+
+  .dates {
+    font-size: 1.3rem;
+  }
+
+  .main-content {
+    padding: 20px 10px;
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .initials {
+    font-size: 2rem;
+  }
+
+  .announcement {
+    font-size: 1.2rem;
+  }
+
+  .names {
+    font-size: 2.4rem;
+  }
+
+  .dates {
+    font-size: 1.2rem;
+  }
+}
+
+/* Mode paysage sur mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .wedding-container {
+    min-height: 100vh;
+  }
+
+  .header {
+    top: 15px;
+  }
+
+  .initials {
+    font-size: 2rem;
+  }
+
+  .announcement {
+    font-size: 1.2rem;
+  }
+
+  .names {
+    font-size: 2.5rem;
+    margin: 10px 0;
+  }
+
+  .dates {
+    font-size: 1.2rem;
+  }
+
+  .main-content {
+    gap: 10px;
+  }
+}
