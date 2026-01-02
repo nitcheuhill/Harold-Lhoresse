@@ -1,17 +1,13 @@
 import { Component } from '@angular/core';
-// import { RouterOutlet } from '@angular/router';
+import { RouterOutlet } from '@angular/router'; // ← DÉCOMMENTER
 import { CommonModule } from '@angular/common';
-import { HomeComponent } from './pages/home/home.component';
-import { WeddingEventsComponent } from './pages/wedding-events/wedding-events.component';
-import { GuestInfoComponent } from './pages/guest-info/guest-info.component';
 
 @Component({
   selector: 'app-root',
+  standalone: true, // ← Assurez-vous que c'est présent
   imports: [
     CommonModule,
-    HomeComponent,
-    WeddingEventsComponent,
-    GuestInfoComponent,
+    RouterOutlet, // ← AJOUTER ICI
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

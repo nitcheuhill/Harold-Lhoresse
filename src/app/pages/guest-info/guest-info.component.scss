@@ -3,7 +3,7 @@
 .guest-info-container {
   position: relative;
   width: 100%;
-  min-height: 90vh;
+  min-height: 100vh;
   background-image: url('/images/img4.png');
   background-size: cover;
   background-position: center;
@@ -91,6 +91,45 @@
   margin: 0;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
 }
+/* États spéciaux */
+.loading {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+.loading-text {
+  font-family: 'Cormorant Upright', serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.not-found-message {
+  text-align: center;
+}
+
+.error-message {
+  font-family: 'Cormorant Upright', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  margin-top: 30px;
+}
 
 /* Responsive Tablette */
 @media screen and (max-width: 1024px) {
@@ -117,6 +156,10 @@
   .dates {
     font-size: 2.2rem;
   }
+  .error-message {
+    font-size: 1.8rem;
+  }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -153,13 +196,16 @@
   .dates {
     font-size: 2rem;
   }
+   .error-message {
+    font-size: 1.6rem;
+  }
 }
 
 /* Responsive Téléphone */
 @media screen and (max-width: 480px) {
   .guest-info-container {
-    min-height: 60vh;
-    background-position: 60% center;
+    min-height: 80vh;
+    background-position: 48% center;
   }
 
   .content-wrapper {
@@ -189,6 +235,15 @@
   .dates {
     font-size: 1.6rem;
   }
+  
+  .loading-text {
+    font-size: 2rem;
+  }
+
+  .error-message {
+    font-size: 1.4rem;
+    margin-top: 20px;
+  }
 }
 
 @media screen and (max-width: 375px) {
@@ -214,6 +269,11 @@
 
   .dates {
     font-size: 1.5rem;
+  }
+
+  
+  .error-message {
+    font-size: 1.3rem;
   }
 }
 
@@ -258,5 +318,9 @@
 
   .dates {
     font-size: 1.4rem;
+  }
+   .error-message {
+    font-size: 1.3rem;
+    margin-top: 15px;
   }
 }
