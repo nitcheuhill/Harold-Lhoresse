@@ -7,7 +7,94 @@ import { Guest } from '../models/guest.model';
 export class GuestService {
   // Base de données des invités
   private guests: Guest[] = [
-    // Exemples de couples
+    // Exemples de couples avec NOM DE FAMILLE COMMUN
+    {
+      id: 'dupont',
+      type: 'couple',
+      firstName: 'Jean',
+      lastName: 'Dupont', // Nom de famille commun
+      partnerFirstName: 'Sophie',
+      // Pas de partnerLastName = même nom
+      table: 'Amour',
+      dressCode: 'Blanc or',
+    },
+    // Affiche: "Monsieur & Madame Dupont"
+
+    {
+      id: 'bernard',
+      type: 'couple',
+      firstName: 'Paul',
+      lastName: 'Bernard',
+      partnerFirstName: 'Marie',
+      table: 'Bonheur',
+      dressCode: 'Chic',
+    },
+    // Affiche: "Monsieur & Madame Bernard"
+
+    // Exemples de couples avec NOMS DE FAMILLE DIFFÉRENTS
+    {
+      id: 'Kuekam',
+      type: 'couple',
+      firstName: 'Jean',
+      lastName: 'Kuekam',
+      partnerFirstName: 'Sophie',
+      partnerLastName: 'Martin', // Nom différent
+      table: 'Charme',
+      dressCode: 'Blanc or',
+    },
+    {
+      id: 'Tchako',
+      type: 'couple',
+      firstName: 'Jean',
+      lastName: 'Tchako',
+      partnerFirstName: 'Sophie',
+      partnerLastName: 'Martin', // Nom différent
+      table: 'Charme',
+      dressCode: 'Blanc or',
+    },
+    {
+      id: 'Happi',
+      type: 'couple',
+      firstName: 'Jean',
+      lastName: 'Happi',
+      partnerFirstName: 'Sophie',
+      partnerLastName: 'Martin', // Nom différent
+      table: 'Charme',
+      dressCode: 'Blanc or',
+    },
+    {
+      id: 'Keuni',
+      type: 'couple',
+      firstName: 'Jean',
+      lastName: 'Keuni',
+      partnerFirstName: 'Sophie',
+      partnerLastName: 'Martin', // Nom différent
+      table: 'Charme',
+      dressCode: 'Blanc or',
+    },
+    {
+      id: 'MBAH SOO',
+      type: 'couple',
+      firstName: 'Jean',
+      lastName: 'MBAH SOO',
+      partnerFirstName: 'Sophie',
+      partnerLastName: 'Martin', // Nom différent
+      table: 'Charme',
+      dressCode: 'Blanc or',
+    },
+    {
+      id: 'NJIKITCHEU',
+      type: 'couple',
+      firstName: 'Jean',
+      lastName: 'NJIKITCHEU',
+      partnerFirstName: 'Sophie',
+      partnerLastName: 'Martin', // Nom différent
+      table: 'Charme',
+      dressCode: 'Blanc or',
+    },
+    // Affiche: "Mr Jean Dupont & Madame Sophie Martin"
+
+    // Exemple de couple SANS NOM DE FAMILLE
     {
       id: 'nono',
       type: 'couple',
@@ -16,26 +103,7 @@ export class GuestService {
       table: 'Amour',
       dressCode: 'Blanc or',
     },
-    {
-      id: 'jean&sophie',
-      type: 'couple',
-      firstName: 'Jean',
-      lastName: 'Dupont',
-      partnerFirstName: 'Sophie',
-      partnerLastName: 'Martin',
-      table: 'Romance',
-      dressCode: 'Élégant',
-    },
-    {
-      id: 'paul&marie',
-      type: 'couple',
-      firstName: 'Paul',
-      lastName: 'Bernard',
-      partnerFirstName: 'Marie',
-      partnerLastName: 'Bernard',
-      table: 'Bonheur',
-      dressCode: 'Chic',
-    },
+    // Affiche: "Mr Nono & Madame Marie"
 
     // Exemples de singles hommes
     {
@@ -47,6 +115,8 @@ export class GuestService {
       table: 'Amitié',
       dressCode: 'Formel',
     },
+    // Affiche: "Monsieur Pierre Durand"
+
     {
       id: 'thomas',
       type: 'single',
@@ -56,6 +126,7 @@ export class GuestService {
       table: 'Joie',
       dressCode: 'Blanc or',
     },
+    // Affiche: "Monsieur Thomas Petit"
 
     // Exemples de singles femmes
     {
@@ -67,6 +138,8 @@ export class GuestService {
       table: 'Tendresse',
       dressCode: 'Élégant',
     },
+    // Affiche: "Madame Claire Moreau"
+
     {
       id: 'isabelle',
       type: 'single',
@@ -76,6 +149,7 @@ export class GuestService {
       table: 'Douceur',
       dressCode: 'Blanc or',
     },
+    // Affiche: "Madame Isabelle Laurent"
   ];
 
   /**
